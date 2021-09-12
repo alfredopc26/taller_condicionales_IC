@@ -48,3 +48,20 @@ subtotal = int(input('Digite el subtotal de la compra: \n'))
 result = descuento_num_azar(subtotal)
 print(f"El numero al azar es : {result['num']}")
 print(f"El descuento es de : $ {result['descuento']}")
+#
+#Punto 3
+#cuota a pagar al cliente por monto
+#
+
+def cuota_pagar(monto):
+    
+    
+    if monto >= 50000:
+        cuota = monto * 0.02
+    else:
+        cuota = monto * 0.03
+        
+    return cuota
+
+monto = int(input('Digite el monto del cliente: \n'))
+print(f'La cuota a pagar es de: $ {cuota_pagar(monto)}')
