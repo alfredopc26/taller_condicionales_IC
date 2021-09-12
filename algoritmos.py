@@ -65,3 +65,20 @@ def cuota_pagar(monto):
 
 monto = int(input('Digite el monto del cliente: \n'))
 print(f'La cuota a pagar es de: $ {cuota_pagar(monto)}')
+#
+#Punto 4
+#Dinero de multa por contaminacion
+#
+
+def check_multa(puntos, g_diarias):
+    
+    multa = 0
+    
+    if(puntos > 170):
+        multa = (g_diarias * 5) * 0.50
+    
+    return multa
+
+g_diarias = float(input('Digite las ganancias diarias de la fabrica: \n'))
+puntos = float(input('Registre los puntos de contaminacion de la fabrica:'))
+print(f'La multa a pagar es de: $ {check_multa(puntos, g_diarias)}')
