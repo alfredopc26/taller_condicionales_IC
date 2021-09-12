@@ -197,3 +197,23 @@ def num_operacion(numA, numB):
 numA = int(input('Digite el primer numero: \n'))
 numB = int(input('Digite el segundo numero: \n'))
 print(f"El resultado es : {num_operacion(numA, numB)}")
+#
+# Punto 10
+# Leer 3 numeros y determinar mayor
+
+def num_mayor(numA, numB, numC):
+    
+    r = 'hay numeros iguales'
+    if numA > numB and numA > numC:
+        r = numA
+    elif numB > numA and numB > numC:
+        r = numB
+    elif numC > numA and numC > numB:
+        r = numC
+        
+    return r
+
+numA = int(input('Digite el primer numero: \n'))
+numB = int(input('Digite el segundo numero: \n'))
+numC = int(input('Digite el tercer numero: \n'))
+print(f"El resultado es : {num_mayor(numA, numB, numC, )}")
