@@ -121,3 +121,32 @@ cant_comp = int(input('Digite la cantidad de computadores a comprar: \n'))
 result = desc_computadores(cant_comp)
 print(f"Se le hizo un descuento de : % {result['descuento']*100}")
 print(f"El total de la compra fue : $ {result['total']}")
+#
+#Punto 7
+#Descuento sobre precio sin iva
+
+def desc_preciosiniva(p_unit, marca):
+    
+    descuento1 = 0
+    descuento2 = 0
+    iva = p_unit*0.16
+    
+    if p_unit >= 2000:
+        descuento1 = p_unit * 0.10
+        
+    if marca == 1:
+        descuento2 = p_unit * 0.05
+        
+    return { 
+        'descuento_valor': descuento1,
+        'descuento_marca': descuento2,
+        'total': p_unit - descuento1 - descuento2 + iva
+        }
+
+
+p_unit = float(input('Digite el precio del aparato: \n'))
+marca = int(input('Seleccione la marca: \n 1. NOSY \n 2. Sungsam \n 3. GL\n 4. Otra \n '))
+result = desc_preciosiniva(p_unit, marca)
+print(f"El descuento por precio aplicado es de : $ {result['descuento_valor']}")
+print(f"El descuento por marca aplicado es de : $ {result['descuento_marca']}")
+print(f"El total de la compra es de : $ {result['total']}")
