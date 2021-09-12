@@ -150,3 +150,32 @@ result = desc_preciosiniva(p_unit, marca)
 print(f"El descuento por precio aplicado es de : $ {result['descuento_valor']}")
 print(f"El descuento por marca aplicado es de : $ {result['descuento_marca']}")
 print(f"El total de la compra es de : $ {result['total']}")
+#
+#Punto 8
+#Pago a fabricante, cantidad a invertir, valor prestamo, valor credito e intereses
+
+def compra_fabricante(monto):
+    
+    prestamo = 0
+    if monto >= 500000:
+        invertir = monto * 0.55
+        prestamo = monto * 0.30
+        credito = monto * 0.15        
+    else:
+        invertir = monto * 0.70
+        credito = monto * 0.30
+    interes = credito * 0.20
+    
+    return {
+        'invertir' : invertir,
+        'prestamo' : prestamo,
+        'credito' : credito,
+        'intereses' : interes
+        }
+
+monto = float(input('Digite el monto de la compra: \n'))
+result = compra_fabricante(monto)
+print(f"La cantidad a invertir es : $ {result['invertir']}")
+print(f"El valor del prestamo : $ {result['prestamo']}")
+print(f"El valor del credito es: $ {result['credito']}")
+print(f"El valor de los intereses son : $ {result['intereses']}")
