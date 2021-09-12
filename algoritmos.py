@@ -102,3 +102,22 @@ if compra:
     print('Si debes comprar el Automovil')
 else:
     print('No debes comprar el Automovil.')
+#
+#Punto 6
+#descuento por numeros de computadoras compradas
+
+def desc_computadores(cant_comp):
+    
+    precio_base = 11000
+    if cant_comp < 5:
+        descuento = 0.10
+    elif cant_comp >= 5 and cant_comp < 10:
+        descuento = 0.20
+    else:
+        descuento = 0.40
+    return { 'descuento': descuento, 'total': (precio_base*cant_comp) - descuento}
+
+cant_comp = int(input('Digite la cantidad de computadores a comprar: \n'))
+result = desc_computadores(cant_comp)
+print(f"Se le hizo un descuento de : % {result['descuento']*100}")
+print(f"El total de la compra fue : $ {result['total']}")
