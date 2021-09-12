@@ -179,3 +179,21 @@ print(f"La cantidad a invertir es : $ {result['invertir']}")
 print(f"El valor del prestamo : $ {result['prestamo']}")
 print(f"El valor del credito es: $ {result['credito']}")
 print(f"El valor de los intereses son : $ {result['intereses']}")
+#
+# Punto 9
+# Leer dos numeros, iguales mult, may sum, rest
+
+def num_operacion(numA, numB):
+    
+    if numA == numB:
+        result = numA * numB
+    elif numA > numB:
+        result = numA - numB
+    else:
+        result = numA + numB
+        
+    return result
+
+numA = int(input('Digite el primer numero: \n'))
+numB = int(input('Digite el segundo numero: \n'))
+print(f"El resultado es : {num_operacion(numA, numB)}")
