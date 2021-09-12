@@ -82,3 +82,23 @@ def check_multa(puntos, g_diarias):
 g_diarias = float(input('Digite las ganancias diarias de la fabrica: \n'))
 puntos = float(input('Registre los puntos de contaminacion de la fabrica:'))
 print(f'La multa a pagar es de: $ {check_multa(puntos, g_diarias)}')
+#
+#Punto 5
+#Ayuda a decidir compra de terreno o automovil
+
+def det_compra(dev_auto, inc_terreno):
+    
+    mit_terreno = inc_terreno / 2
+    comprar = False
+    if dev_auto < mit_terreno:
+        comprar = True
+        
+    return comprar
+
+dev_auto = int(input('Digite devaluacion de Automovil: '))
+inc_terreno = int(input('Digite incremento de terreno: '))
+compra = det_compra(dev_auto, inc_terreno)
+if compra:
+    print('Si debes comprar el Automovil')
+else:
+    print('No debes comprar el Automovil.')
